@@ -1,0 +1,33 @@
+/*using of css variables on root element and referencing them 
+in CSS selectors
+*/
+
+body {
+	text-align: center;
+	font-family: roboto;
+}
+
+span {
+	text-transform: uppercase;
+}
+
+img {
+	width: 50%;
+}
+
+
+:root{
+	--base: #ffc600;
+	--space: 10px;
+	--blur: 10px;
+}
+
+img {
+	padding: var(--spacing);
+	background: var(--base);
+	filter: blur(var(--blur));
+}
+
+span {
+	color: var(--base);
+}

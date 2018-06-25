@@ -1,0 +1,56 @@
+<%include ./partials/header.ejs %>
+<div id="app">
+    <div class="jumbotron">
+        <h1 id="jumbo-text">JS + CSS + HTML</h1>
+    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg- col-md-2 col-sm-1">
+            <div class="list-group">
+              <a class="list-group-item" href="/static/AgainATodoList/app.html">Immutable To-Do list</a>
+              <a class="list-group-item" href="/static/Clock/app.html">Analog Clock</a>
+              <a class="list-group-item" href="/static/DrumKit/app.html">Drum kit</a>
+              <a class="list-group-item" href="/static/Flex-Gallery/app.html" >Flex Box Gallery</a>
+              <a class="list-group-item" href="/static/html-canvas/app.html">HTML Canvas</a>
+            </div>
+        </div>
+     <div class="col-lg-3 col-md-2 col-sm-1">
+            <div class="list-group">
+              <a class="list-group-item" href="/static/searchbox-auto/app.html">SearchBox- Auto Complete</a>
+              <a class="list-group-item" href="/static/slideinonscroll/app.html">Image Slide in using offset height</a>
+              <a class="list-group-item" href="/static/DrumKit/app.html">Mutable To-Do List</a>
+              <a class="list-group-item" href="/static/CSSVariables/app.html">CSS Variables Demo</a>
+              <a class="list-group-item" href="/static/qrgenerator/app.html">qr generator</a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-2 col-sm-1">
+        <div class="list-group">
+            <a class="list-group-item" href="#">Coming soon - Vue Js Projects</a>
+            <a class="list-group-item" href="#">Coming soon - Vue Js Projects</a>
+            <a class="list-group-item" href="#">Coming soon - Vue Js Projects</a>
+            <a class="list-group-item" href="#">Coming soon - Vue Js Projects</a>
+            <a class="list-group-item" href="#">Coming soon - Vue Js Projects</a>
+        </div>
+    </div> <!-- row -->
+</div> <!-- container -->
+</div>
+    
+</div>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            isActive: new Array(9).fill(false)
+            
+        },
+        methods: {
+            itemClicked: function(index){
+                this.isActive[index] = !this.isActive[index]
+                console.log(this.$event)
+                console.log(this.isActive)
+            }
+        }
+    })
+</script>                
+<%include ./partials/footer.ejs %>
